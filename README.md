@@ -4,13 +4,15 @@ This is a pool where I can swim with multiple Python frameworks.
 
 ## Prerequisites
 
-Before you begin, ensure you have the following prerequisites installed:
+Before begin, ensure we have the following prerequisites installed:
 
 - Python 3.10+
 - PostgreSQL
 - pip (Python package installer)
 
 ## Getting Started
+
+![](C:\Users\Admin\Desktop\2024-04-05_000025.png)
 
 To get started with the tutorial, follow these steps:
 
