@@ -12,8 +12,7 @@ Before begin, ensure we have the following prerequisites installed:
 
 ## Getting Started
 
-![](C:\Users\Admin\Desktop\2024-04-05_000025.png)
-
+![2024-04-05_000025.png](2024-04-05_000025.png)
 To get started with the tutorial, follow these steps:
 
 1. Clone the repository to your local machine:
