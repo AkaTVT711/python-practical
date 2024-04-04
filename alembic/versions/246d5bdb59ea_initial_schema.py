@@ -28,19 +28,19 @@ def upgrade() -> None:
         sa.Column('last_name', sa.String, nullable=True),
         sa.Column('hash_password', sa.String, nullable=False),
         sa.Column('is_active', sa.Boolean, default=True),
-        sa.Column('is_admin', sa.Boolean, default=True)
-        # sa.Column('company_id', sa.Integer, sa.ForeignKey('companies.id')),
+        sa.Column('is_admin', sa.Boolean, default=True),
+        sa.Column('company_id', sa.Integer, sa.ForeignKey('companies.id'))
     )
-    #
-    # # Create the 'companies' table
-    # op.create_table(
-    #     'companies',
-    #     sa.Column('id', sa.Integer, primary_key=True),
-    #     sa.Column('name', sa.String, index=True),
-    #     sa.Column('description', sa.String),
-    #     sa.Column('mode', sa.Integer, default=0, nullable=True),
-    #     sa.Column('rating', sa.Integer),
-    # )
+
+    # Create the 'companies' table
+    op.create_table(
+        'companies',
+        sa.Column('id', sa.Integer, primary_key=True),
+        sa.Column('name', sa.String, index=True),
+        sa.Column('description', sa.String),
+        sa.Column('mode', sa.Integer, nullable=True),
+        sa.Column('rating', sa.Integer),
+    )
 
     # Create the 'tasks' table
     op.create_table(
@@ -58,7 +58,7 @@ def downgrade() -> None:
     op.drop_table('tasks')
 
     # Drop the 'companies' table
-    # op.drop_table('companies')
+    op.drop_table('companies')
 
     # Drop the 'users' table
     op.drop_table('users')

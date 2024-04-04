@@ -15,6 +15,8 @@ class User(Base):
     username = Column(String)
     first_name = Column(String)
     last_name = Column(String)
+    company_id = Column(Integer, ForeignKey("companies.id"))
+    company = relationship("Company", back_populates="users")
     tasks = relationship("Task", back_populates="owner")
 
 
@@ -26,3 +28,14 @@ class Task(Base):
     description = Column(String, index=True)
     owner_id = Column(Integer, ForeignKey("users.id"))
     owner = relationship("User", back_populates="tasks")
+
+
+class Company(Base):
+    __tablename__ = "companies"
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String, index=True)
+    description = Column(String, index=True)
+    mode = Column(Boolean, default=True)
+    rating = Column(Integer)
+    users = relationship("User", back_populates="company")

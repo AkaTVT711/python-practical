@@ -19,24 +19,22 @@ To get started with the tutorial, follow these steps:
    cd python-practical
 
 
-2. Set up a virtual environment (optional but recommended):
-   python -m venv venv
+2. Creates a virtual environment named 'env'
+   virtualenv env
 
 
-3. Activate the virtual environment:
+3. Set up a virtual environment
 
-- On Windows:
+- via WSL:
   ```
-  venv\Scripts\activate
-  ```
-- On macOS and Linux:
-  ```
-  source venv/bin/activate
+  source env/bin/activate
   ```
 
 4. Install dependencies:
    ```
-    pip install -r requirements.txt
+    pip3 install psycopg2-binary
+    pip3 install psycopg2
+    pip3 install -r requirements.txt
     ```
 
 5. Initialize the database schema:
