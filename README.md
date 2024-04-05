@@ -54,27 +54,18 @@ To get started with the tutorial, follow these steps:
 
 The project structure is organized as follows:
 
-- `app`: Contains the FastAPI application code.
-- `__init__`: The file __init__.py is just an empty file, but it tells Python that sql_app with all its modules (Python files) is a package.
-- `crud.py`: Implements CRUD operations for database models.
-- `database.py`: Implements CRUD operations for database models.
-- `main.py`: Defines the FastAPI application instance and includes routers.
-- `models.py`: Defines database models using SQLAlchemy ORM.
-- `schemas.py`:  Defines Pydantic models.
-
-
 ```bash
   python-practical/
-    ├── alembic/
-        ├── versions
-    ├── app/
-        ├── __init__.py
-        ├── crud.py
-        ├── database.py
-        ├── main.py
-        ├── models.py
-        └── schemas.py
-    └── requirements.txt
-    └── alembic.ini
-    └── README.md
+    ├── alembic/                 # Directory for database migrations
+    │   └── versions/            # Directory containing Alembic migration scripts
+    ├── app/                     # FastAPI application directory
+    │   ├── __init__.py          # Package initialization file
+    │   ├── crud.py              # File containing CRUD operations for database models
+    │   ├── database.py          # File containing database setup and operations
+    │   ├── main.py              # Main FastAPI application file defining routers
+    │   ├── models.py            # File defining database models using SQLAlchemy ORM
+    │   └── schemas.py           # File defining Pydantic models
+    ├── requirements.txt         # File containing project dependencies
+    ├── alembic.ini              # Alembic configuration file
+    └── README.md                # Project README file
 ```
